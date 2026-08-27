@@ -2,7 +2,17 @@
 
 **Real-time hand tracking portal filter** - Works perfectly on **HP, Tablet, and Laptop!**
 
-Based on the original [syahdanfx/Retrolens](https://github.com/syahdanfx/Retrolens) project, this version uses **Streamlit** for easy mobile & desktop deployment.
+Streamlit version untuk kemudahan akses dari HP dan Desktop tanpa perlu install banyak dependencies.
+
+---
+
+## 🚀 **RUN INSTANTLY - Click Button Below!**
+
+### ⭐ **CLICK HERE TO RUN ONLINE (No Installation Needed!)**
+
+[![Open in Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://retrolens-mobile-mahar.streamlit.app)
+
+👆 **Just click above and start using immediately on your HP or Laptop!** ✨
 
 ---
 
@@ -13,25 +23,57 @@ Based on the original [syahdanfx/Retrolens](https://github.com/syahdanfx/Retrole
 - ✅ **11 Filters** - Dual-tone, Thermal, Sketch, Pixelate, Glitch, Invert, Red-channel, Edge, Blur, Cartoon, Rainbow-wave
 - ✅ **2D/3D Mode** - Toggle between different gesture detection modes
 - ✅ **Mobile Responsive** - Perfect on HP, Tablet, and Laptop
-- ✅ **No Installation Hassle** - Works with simple `pip install`
+- ✅ **No Installation** - Runs directly from browser
 - ✅ **Real-time Settings** - Adjust sensitivity on-the-fly
+
+---
+
+## 💻 Run Locally (Optional)
+
+### Install
+
+```bash
+git clone https://github.com/mahar-debug/Retrolens-Mobile.git
+cd Retrolens-Mobile
+pip install -r requirements_streamlit.txt
+```
+
+### Run on Desktop/Laptop
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Browser will open at: `http://localhost:8501`
+
+### Access from Mobile Phone (Same WiFi)
+
+1. **On Laptop**, run the command above
+2. **Find the IP address** shown in terminal (e.g., `192.168.1.100`)
+3. **On Phone**, open browser: `http://192.168.1.100:8501`
+4. Tap **"📹 Live Camera"** and allow camera access
+5. **Start using!**
 
 ---
 
 ## 📱 Cara Menggunakan (Indonesian)
 
-### Install
+### 🎯 LANGSUNG BUKA DI BROWSER
+
+Klik link di atas untuk langsung membuka aplikasi tanpa perlu install apapun!
+
+### Install Lokal (Opsional)
 
 ```bash
+git clone https://github.com/mahar-debug/Retrolens-Mobile.git
+cd Retrolens-Mobile
 pip install -r requirements_streamlit.txt
 ```
-
-> ⚠️ **Pengguna Apple Silicon:** jangan upgrade mediapipe dari versi yang di-pin (`0.10.9`)
 
 ### Jalankan di Laptop/Desktop
 
 ```bash
-streamlit run retrolens_streamlit.py
+streamlit run streamlit_app.py
 ```
 
 Aplikasi akan terbuka di browser: `http://localhost:8501`
@@ -46,12 +88,12 @@ Aplikasi akan terbuka di browser: `http://localhost:8501`
 
 ---
 
-## 🎮 Kontrol
+## 🎮 Controls
 
 ### Gesture Controls
-- **Bentangin 2 tangan** → Buka portal / Create portal area
-- **Pinch jempol + kelingking** → Ganti filter / Switch filter
-- **Kepal 2 tangan** → Toggle mode 2D/3D
+- **Spread both hands** → Open portal / Create portal area
+- **Pinch thumb + pinky** → Switch filter
+- **Clench both fists** → Toggle mode 2D/3D
 
 ### Button Controls
 - **🔄 2D/3D** - Toggle between 2D and 3D mode
@@ -61,32 +103,6 @@ Aplikasi akan terbuka di browser: `http://localhost:8501`
 ### Settings
 - **Pinch Sensitivity** - Adjust how sensitive pinch detection is
 - **Fist Detection** - Adjust fist clenching sensitivity
-
----
-
-## 🇬🇧 English Guide
-
-### Installation
-
-```bash
-pip install -r requirements_streamlit.txt
-```
-
-### Run on Desktop/Laptop
-
-```bash
-streamlit run retrolens_streamlit.py
-```
-
-Browser will open at: `http://localhost:8501`
-
-### Access from Mobile Phone
-
-1. **On Laptop**, run the command above
-2. **Find the IP address** shown in terminal (e.g., `192.168.1.100`)
-3. **On Phone**, open browser: `http://192.168.1.100:8501`
-4. Tap **"📹 Live Camera"** and allow camera access
-5. **Start using!**
 
 ---
 
@@ -120,9 +136,9 @@ Browser will open at: `http://localhost:8501`
 
 ---
 
-## 🛠️ Customization
+## 🔧 Customization
 
-Edit `PipelineConfig` in `retrolens_streamlit.py`:
+Edit `PipelineConfig` in `streamlit_app.py`:
 
 ```python
 @dataclass
@@ -147,10 +163,10 @@ class PipelineConfig:
 
 ---
 
-## 🎬 Demo
+## 🎬 Quick Demo
 
-1. Open app
-2. Choose "📹 Live Camera"
+1. **Open the Streamlit Cloud link above**
+2. Choose **"📹 Live Camera"**
 3. Allow camera access
 4. Spread both hands to create portal
 5. Pinch thumb + pinky to change filter
@@ -160,15 +176,15 @@ class PipelineConfig:
 
 ## 📄 License
 
-MIT License - See original [Retrolens](https://github.com/syahdanfx/Retrolens) for details
+MIT License
 
 ---
 
-## 🙏 Credits
+## 👤 Author
 
-- Original project: [syahdanfx/Retrolens](https://github.com/syahdanfx/Retrolens)
-- Streamlit adaptation by [@mahar-debug](https://github.com/mahar-debug)
-- Built with [MediaPipe](https://mediapipe.dev/) and [OpenCV](https://opencv.org/)
+- **Developer:** [@mahar-debug](https://github.com/mahar-debug)
+- **Built with:** [MediaPipe](https://mediapipe.dev/) and [OpenCV](https://opencv.org/)
+- **Powered by:** [Streamlit](https://streamlit.io/)
 
 ---
 
@@ -177,7 +193,7 @@ MIT License - See original [Retrolens](https://github.com/syahdanfx/Retrolens) f
 - Make sure you have good lighting for better hand tracking
 - Keep your hands within camera view
 - Allow camera permissions when prompted
-- For best results, use a desktop camera or phone with good autofocus
+- For best results, use a device camera or phone with good autofocus
 - Adjust sensitivity sliders if tracking feels off
 
 ---
@@ -186,7 +202,7 @@ MIT License - See original [Retrolens](https://github.com/syahdanfx/Retrolens) f
 
 ### Camera not detected
 - Check if camera permission is granted
-- Try `cam_index=1` or `cam_index=2` for different cameras
+- Try allowing camera access in browser settings
 
 ### Hand tracking not working
 - Ensure good lighting
@@ -196,18 +212,37 @@ MIT License - See original [Retrolens](https://github.com/syahdanfx/Retrolens) f
 ### Slow performance
 - Reduce frame width/height in settings
 - Close other applications
-- Check your internet connection (for mobile access)
+- Check your internet connection
 
 ---
 
-## 🚀 Future Improvements
+## 🚀 Deployment Options
 
-- [ ] Add more filter effects
-- [ ] Gesture recording
-- [ ] Filter presets
-- [ ] Performance optimization for mobile
-- [ ] Multi-hand gestures
+### Option 1: Streamlit Cloud (Recommended - Already Set Up!)
+- ✅ **Free hosting**
+- ✅ **No configuration needed**
+- ✅ **Auto-updates from GitHub**
+- Just click the button at the top!
+
+### Option 2: Run Locally
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
+## 🌐 How It Works
+
+1. **GitHub Repository** contains the code
+2. **Streamlit Cloud** automatically deploys from this repo
+3. **No servers to manage** - just push to GitHub!
+4. **Live updates** - changes appear instantly
 
 ---
 
 **Happy filtering!** 🎨✨
+
+---
+
+**GitHub:** https://github.com/mahar-debug/Retrolens-Mobile  
+**Live Demo:** https://retrolens-mobile-mahar.streamlit.app
