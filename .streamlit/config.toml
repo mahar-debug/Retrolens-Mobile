@@ -1,0 +1,17 @@
+[general]
+email = "sayalingga99@gmail.com"
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "info"
+
+[client]
+showErrorDetails = true
+toolbarMode = "viewer"
+
+[server]
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
